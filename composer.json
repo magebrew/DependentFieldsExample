@@ -1,0 +1,21 @@
+{
+    "name": "magebrew/dependent-fields-example",
+    "description": "",
+    "type": "magento2-module",
+    "authors": [
+        {
+            "email": "magebrewdev@gmail.com",
+            "name": "Magebrew"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Magebrew\\DependentFieldsExample\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

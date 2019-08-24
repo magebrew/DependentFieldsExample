@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="general">
+        <field name="source" formElement="select">
+            <settings>
+                <dataType>text</dataType>
+                <dataScope>source</dataScope>
+                <label translate="true">Source</label>
+                <switcherConfig>
+                    <rules>
+                        <rule name="0">
+                            <value>0</value>
+                            <actions>
+                                <action name="0">
+                                    <target>category_form.category_form.general.target1</target>
+                                    <callback>show</callback>
+                                </action>
+                                <action name="1">
+                                    <target>category_form.category_form.general.target2</target>
+                                    <callback>disable</callback>
+                                </action>
+                            </actions>
+                        </rule>
+                        <rule name="1">
+                            <value>1</value>
+                            <actions>
+                                <action name="0">
+                                    <target>category_form.category_form.general.target1</target>
+                                    <callback>hide</callback>
+                                </action>
+                                <action name="1">
+                                    <target>category_form.category_form.general.target2</target>
+                                    <callback>enable</callback>
+                                </action>
+                            </actions>
+                        </rule>
+                    </rules>
+                    <enabled>true</enabled>
+                </switcherConfig>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Magento\Config\Model\Config\Source\Yesno"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+        <field name="target1" formElement="input">
+            <settings>
+                <dataType>string</dataType>
+                <label translate="true">Target 1</label>
+            </settings>
+        </field>
+        <field name="target2" formElement="input">
+            <settings>
+                <dataType>string</dataType>
+                <label translate="true">Target 2</label>
+            </settings>
+        </field>
+    </fieldset>
+</form>
